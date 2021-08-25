@@ -1,0 +1,79 @@
+* {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: japanese3017;
+    src: url(../fonts/japanese_3017/Japanese3017.ttf);
+}
+
+body {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #333;
+    overflow-x: hidden;
+}
+
+.header {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.content {
+    max-width: 40rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin: auto;
+    text-align: center;
+}
+
+.header-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.header-video video {
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.header-overlay {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #424447;
+    z-index: 1;
+    opacity: .80;
+}
+
+.header-content {
+    z-index: 2;
+}
+.header-content h1 {
+    font-size: 50px;
+    margin-bottom: 0;
+    font-family: japanese3017;
+    
+}
+
+.header-content p {
+    font-size: 1.5rem;
+    display: block;
+    padding-bottom: 2rem;
+}
+
+.btn {
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+    text-decoration: none;
+}
