@@ -4,11 +4,19 @@
     src: url(../fonts/japanese_3017/Japanese3017.ttf);
 }
 
+@media (min-width: 460px;){
+    /*mobile*/ 
+}
+@media (min-width: 768px;){
+    /*tablets*/
+}
+@media (min-width: 1024px;){
+    /*desktop*/
+}
+
 body {
     margin: 0;
     font-size: 50px;
-    
-    
 }
 
 .titulo {
@@ -31,8 +39,7 @@ body {
     color: white;
     font-weight: 700;
     font-family: japanese3017;
-    margin-right: 120%;
-    padding-bottom: 20%;
+
 }
 
 #miVideo {
