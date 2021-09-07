@@ -1,56 +1,77 @@
 
-@font-face {
-    font-family: japanese3017;
-    src: url(../fonts/japanese_3017/Japanese3017.ttf);
+:root {
+    --naraja: rgb(255, 94, 0);
+    --fondo: #2b2b27;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    margin: 0;
-    font-size: 50px;
-    
-    
+    background: var(--fondo);
+    font-family: 'Fira Sans', sans-serif;
+    padding: 10px;
 }
 
-.titulo {
-    padding-top: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 60%; 
-      
+.contenedor {
+    width: 100%;
     margin: auto;
-    position: relative;
-    z-index: 2;
+}
+
+header {
+    padding: 30px 0;
+}
+
+header .contenedor {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+header .titulo {
+    font-weight: normal;
+    color: var(--naraja);
+    font-size: 40px;
+    font-family: 'Comfortaa', cursive;
+}
+
+header nav a {
+    color: #aaa;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+header nav a:hover, 
+header nav a.activo {
+    color: #fff;
+}
+
+header .logo {
+    width: 40px;
+    height: 40px;
+    display: none;
+}
+
+.session {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.session a {
+    margin: 0px;
+    width: 100px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+@media (min-width:768px) {
     
 }
-
-.titulo h1 {
-    font-size: 3.5rem;
-    text-align: center;
-    color: white;
-    font-weight: 700;
-    font-family: japanese3017;
-    margin-right: 120%;
-    padding-bottom: 20%;
-}
-
-#miVideo {
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-size: cover;
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-}
-
-.capa {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgb(47, 47, 47);
-    opacity: 0.5;
+@media (min-width:1024px) {
+    
 }
