@@ -83,7 +83,7 @@ main{
     max-width: 1440px;
     background-color: #fe5e00;
     justify-content: center;
-    padding: 25px 0px 25px 0px;
+    padding: 25px 25px 25px 25px;
     margin: 20px 0px 20px 0px;
 }
 
@@ -109,10 +109,6 @@ main{
     align-items: center;
 }
 
-.movies{
-    margin-right: 20px;
-}
-
 .imgmovie {
     width: 220px;
     height: 330px;
@@ -126,6 +122,7 @@ footer p{
     color: #fe5e00;
     background-color: rgb(39, 39, 39);
     padding: 20px 0px 20px 0px;
+
 }
 
 @media (min-width:768px) {
@@ -133,11 +130,29 @@ footer p{
 }
 @media (min-width:1024px) {
     .popmovie{
+        display: flex;
+        text-align: center;
         flex-direction: row;
+        max-width: 1440px;
+        background-color: #fe5e00;
+        justify-content: center;
+        padding: 25px 0px 25px 0px;
+        margin: 20px 0px 20px 0px;
     }
     header .logo {
         width: 40px;
         height: 40px;
         display: flex;
+    }
+    .movies{
+        margin-right: 20px;
+    }
+    footer p{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fe5e00;
+        background-color: rgb(39, 39, 39);
+        padding: 20px 0px 20px 0px;
     }
 }
