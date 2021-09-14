@@ -38,42 +38,17 @@ header .titulo {
     font-family: 'Comfortaa', cursive;
 }
 
-header nav a {
-    color: #aaa;
-    text-decoration: none;
-    margin-right: 20px;
-}
-
-header nav a:hover, 
-header nav a.activo {
-    color: #fff;
-}
-
 header .logo {
     width: 40px;
     height: 40px;
     display: none;
 }
 
-.session {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
-.session a {
-    margin: 0px;
-    width: 100px;
-    text-align: center;
-    margin-top: 10px;
-}
-main{
-    color: #fe5e00;
-}
 .titlelist {
     text-transform: uppercase;
     margin: 15px;
+    color: #fe5e00;
+    text-align: center;
 }
 
 .popmovie{
@@ -85,6 +60,7 @@ main{
     justify-content: center;
     padding: 25px 25px 25px 25px;
     margin: 20px 0px 20px 0px;
+    color: silver;
 }
 
 .popmovie li{
@@ -100,7 +76,7 @@ main{
 
 .popmovie li a{
     text-decoration: none;
-    color: #fe5e00;
+    color: silver;
 }
 
 .movie li{
@@ -117,12 +93,12 @@ main{
 
 footer p{
     display: flex;
-    align-items: center;
+    align-content: center;
     justify-content: center;
-    color: #fe5e00;
+    color: silver;
     background-color: rgb(39, 39, 39);
+    margin-bottom: 0;
     padding: 20px 0px 20px 0px;
-
 }
 
 @media (min-width:768px) {
@@ -151,8 +127,11 @@ footer p{
         display: flex;
         align-items: center;
         justify-content: center;
-        color: #fe5e00;
+        color: silver;
         background-color: rgb(39, 39, 39);
         padding: 20px 0px 20px 0px;
+    }
+    .titlelist {
+        text-align: left;
     }
 }

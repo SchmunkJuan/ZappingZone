@@ -41,36 +41,12 @@ header .contenedor a{
     text-decoration: none;
 }
 
-header nav a {
-    color: #aaa;
-    text-decoration: none;
-    margin-right: 20px;
-}
-
-header nav a:hover, 
-header nav a.activo {
-    color: #fff;
-}
-
 header .logo {
     width: 40px;
     height: 40px;
     display: none;
 }
 
-.session {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
-.session a {
-    margin: 0px;
-    width: 100px;
-    text-align: center;
-    margin-top: 10px;
-}
 main{
     color: #fe5e00;
 }
@@ -86,13 +62,14 @@ section{
     margin: 10px;
 }
 
-.movie{
+.movietit{
     text-transform: uppercase;
     margin: 10px;
 }
 
 .subt{
     margin: 10px;
+    color: silver;
 }
 
 #video{
@@ -101,20 +78,27 @@ section{
 
 .imgtit{
     margin: 20px;
-    height: 420px;
+    height: auto;
 }
 
 ul{
     list-style: none;
-    margin: 20px;
+    margin: 0px 20px 20px 20px;
+    color: silver;
 }
 
+.data{
+    border-bottom: rgba(254, 94, 0);
+    border-bottom: solid;
+    border-width: thin;
+    padding: 5px 0px 5px 0px;
+}
 
 footer p{
     display: flex;
     align-content: center;
     justify-content: center;
-    color: #fe5e00;
+    color: silver;
     background-color: rgb(39, 39, 39);
     margin-bottom: 0;
     padding: 20px 0px 20px 0px;
@@ -134,7 +118,20 @@ footer p{
         height: 40px;
         display: flex;
     }
+
+    .imgtit{
+        height: 340px;
+    }
+
     #video{
         width: 750px;
+        height: 340px;
+    }
+
+    .data{
+        border-bottom: rgba(254, 94, 0);
+        border-bottom: solid;
+        border-width: thin;
+        padding: 5px 0px 5px 0px;
     }
 }
