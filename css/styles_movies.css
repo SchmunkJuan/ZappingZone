@@ -1,6 +1,6 @@
 :root {
     --naraja: rgb(255, 94, 0);
-    --fondo: #FFAA4D;
+    --fondo: rgb(39, 39, 39);
 }
 
 * {
@@ -20,10 +20,6 @@ body {
     margin: auto;
 }
 
-.contenedor a{
-    text-decoration: none;
-}
-
 header {
     padding: 30px 0;
 }
@@ -39,6 +35,10 @@ header .titulo {
     color: var(--naraja);
     font-size: 40px;
     font-family: 'Comfortaa', cursive;
+}
+
+header .contenedor a{
+    text-decoration: none;
 }
 
 header nav a {
@@ -71,17 +71,15 @@ header .logo {
     text-align: center;
     margin-top: 10px;
 }
-
 main{
     color: #fe5e00;
 }
-
 section{
-    background-color:  #FFCD8A;
-    border: 20px;
+    background-color: rgb(39, 39, 39);
+    border: auto;
     border-style: solid;
-    border-color: #FF962B;
-    padding: 25px;
+    border-color: #fe5e00;
+    padding: auto;
 }
 
 .div1{
@@ -98,7 +96,7 @@ section{
 }
 
 #video{
-    width: 750px;
+    width: auto;
 }
 
 .imgtit{
@@ -117,7 +115,26 @@ footer p{
     align-content: center;
     justify-content: center;
     color: #fe5e00;
-    background-color: #FFCD8A;
+    background-color: rgb(39, 39, 39);
     margin-bottom: 0;
     padding: 20px 0px 20px 0px;
+}
+
+@media (min-width:768px) {
+    
+}
+
+@media (min-width:1024px) {
+    section{
+        flex-direction: row;
+        border-width: 20px;
+    }
+    header .logo {
+        width: 40px;
+        height: 40px;
+        display: flex;
+    }
+    #video{
+        width: 750px;
+    }
 }
