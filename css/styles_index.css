@@ -125,7 +125,7 @@ main{
 
 footer p{
     display: flex;
-    align-content: center;
+    align-items: center;
     justify-content: center;
     color: #fe5e00;
     background-color: #FFCD8A;
