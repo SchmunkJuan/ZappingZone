@@ -109,7 +109,7 @@ main{
     align-items: center;
 }
 
-#movie{
+.movies{
     margin-right: 20px;
 }
 
@@ -117,10 +117,6 @@ main{
     width: 220px;
     height: 330px;
     margin-bottom: 10px;
-}
-
-.no-margen{
-    margin-right: 0px;
 }
 
 footer p{
