@@ -1,0 +1,141 @@
+
+:root {
+    --naraja: rgb(255, 94, 0);
+    --fondo: #FFAA4D;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--fondo);
+    font-family: 'Fira Sans', sans-serif;
+    padding: 10px;
+}
+
+.contenedor {
+    width: 100%;
+    margin: auto;
+}
+
+header {
+    padding: 30px 0;
+}
+
+header .contenedor {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+header .titulo {
+    font-weight: normal;
+    color: var(--naraja);
+    font-size: 40px;
+    font-family: 'Comfortaa', cursive;
+}
+
+header nav a {
+    color: #aaa;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+header nav a:hover, 
+header nav a.activo {
+    color: #fff;
+}
+
+header .logo {
+    width: 40px;
+    height: 40px;
+    display: none;
+}
+
+.session {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.session a {
+    margin: 0px;
+    width: 100px;
+    text-align: center;
+    margin-top: 10px;
+}
+main{
+    color: #fe5e00;
+}
+.titlelist {
+    text-transform: uppercase;
+    margin: 15px;
+}
+
+.popmovie{
+    display: flex;
+    text-align: center;
+    flex-direction: row;
+    max-width: 1440px;
+    background-color: #FF962B;
+    justify-content: center;
+    padding: 25px 0px 25px 0px;
+    margin: 20px 0px 20px 0px;
+}
+
+.popmovie li{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-color: #FFCD8A;
+    border-style: solid;
+    border-width: 20px;
+    background-color: #FFCD8A;
+}
+
+.popmovie li a{
+    text-decoration: none;
+    color: #fe5e00;
+}
+
+.movie li{
+    border: none;
+    display: flex;
+    align-items: center;
+}
+
+#movie{
+    margin-right: 20px;
+}
+
+.imgmovie {
+    width: 220px;
+    height: 330px;
+    margin-bottom: 10px;
+}
+
+.no-margen{
+    margin-right: 0px;
+}
+
+footer p{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    color: #fe5e00;
+    background-color: #FFCD8A;
+    margin-bottom: 0;
+    padding: 20px 0px 20px 0px;
+}
+
+@media (min-width:768px) {
+    
+}
+@media (min-width:1024px) {
+    
+}
