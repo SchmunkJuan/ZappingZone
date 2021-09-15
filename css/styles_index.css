@@ -38,10 +38,35 @@ header .titulo {
     font-family: 'Comfortaa', cursive;
 }
 
+header nav a {
+    color: #aaa;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+header nav a:hover, 
+header nav a.activo {
+    color: #fff;
+}
+
 header .logo {
     width: 40px;
     height: 40px;
     display: none;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.menu a {
+    margin: 0px;
+    width: 100px;
+    text-align: center;
+    margin-top: 10px;
 }
 
 .titlelist {
@@ -105,6 +130,7 @@ footer p{
     
 }
 @media (min-width:1024px) {
+    
     .popmovie{
         display: flex;
         text-align: center;
@@ -133,5 +159,37 @@ footer p{
     }
     .titlelist {
         text-align: left;
+    }
+    
+    section {
+        margin-left: 13%;
+        margin-right: auto;
+    }
+   
+    header nav a {
+        color: #aaa;
+        text-decoration: none;
+        margin-right: 20px;
+        font-size: 20px;
+    }
+    
+    header nav a:hover, 
+    header nav a.activo {
+        color: #fff;
+    }
+    
+
+    .menu {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    .menu a {
+        margin: 0px;
+        width: 100px;
+        text-align: center;
+        margin-top: 10px;
     }
 }
