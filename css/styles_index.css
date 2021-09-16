@@ -54,10 +54,14 @@ header .logo {
     height: 40px;
     display: none;
 }
+
+
+
 .banner {
     min-height: 25.62em;
     background: url(../img/banner.png);
     background-repeat: no-repeat;
+    display:    none;
 }
 
 .menu {
@@ -186,12 +190,22 @@ footer p{
 
     .menu {
         display: flex;
-        justify-content: center;
+        justify-content: flex-end;
         flex-direction: row;
         flex-wrap: wrap;
     }
+
+    header .contenedor {
+        display: flex;
+        justify-content: flex-start;
+    }
     
- 
+    .banner {
+        min-height: 25.62em;
+        background: url(../img/banner.png);
+        background-repeat: no-repeat;
+        display: flex;
+    }
 
     .menu a {
         margin: 0px;
