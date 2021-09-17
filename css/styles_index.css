@@ -202,7 +202,7 @@ footer p{
         margin-bottom: 25px;
     }
     
-    section {
+    .section1 {
         margin-left: auto;
         margin-right: auto;
     }
@@ -212,11 +212,5 @@ footer p{
         background: url(../img/banner.png);
         background-repeat: no-repeat;
         display: flex;
-    }
-}
-@media (min-width:1080px) {
-    section {
-        margin-left: 12%;
-        margin-right: auto;
     }
 }
