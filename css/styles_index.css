@@ -137,7 +137,10 @@ footer p{
     
 }
 @media (min-width:1024px) {
-    
+   .cajaMovie{
+       display: flex;
+       justify-content: center;
+   }
     header {
         display: flex;
         justify-content: space-between;
@@ -163,11 +166,9 @@ footer p{
         display: flex;
         text-align: center;
         flex-direction: row;
-        max-width: 1440px;
+        max-width: 100%;
         background-color: #fe5e00;
         justify-content: center;
-        padding: 25px 0px 25px 0px;
-        margin: 20px 0px 20px 0px;
     }
     header .logo {
         width: 40px;
@@ -199,6 +200,7 @@ footer p{
         text-align: left;
         margin-top: 25px;
         margin-bottom: 25px;
+        margin-left: 8%;
     }
     
     .section1 {
@@ -214,9 +216,7 @@ footer p{
     }
 
     .banner {
-        min-height: 25.62em;
-        background: url(../img/banner.png);
-        background-repeat: no-repeat;
         display: flex;
+        margin-bottom: 5px;
     }
 }
