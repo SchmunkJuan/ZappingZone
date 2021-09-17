@@ -176,9 +176,14 @@ footer p{
 
     .menu {
         display: flex;
-        justify-content: center;
+        justify-content: flex-end;
         flex-direction: row;
         flex-wrap: wrap;
+    }
+    
+    header .contenedor {
+        display: flex;
+        justify-content: flex-start;
     }
     
     .menu a {
@@ -187,5 +192,4 @@ footer p{
         text-align: center;
         margin-top: 10px;
     }
-
 }
