@@ -13,7 +13,6 @@
 body {
     background: var(--fondo);
     font-family: 'Fira Sans', sans-serif;
-    padding: 10px;
 }
 
 .contenedor {
@@ -55,11 +54,14 @@ header .logo {
     display: none;
 }
 
+
+
 .banner {
     min-height: 25.62em;
     background: url(../img/banner.png);
     background-repeat: no-repeat;
     display:    none;
+   
 }
 
 .menu {
@@ -138,6 +140,27 @@ footer p{
 }
 @media (min-width:1024px) {
     
+    header {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    header .headerContainer{
+        width: 30%;
+    }
+
+    .contenedor{
+      margin: 0px;
+    }
+
+    header nav a {
+        color: #aaa;
+        text-decoration: none;
+        font-size: 22px;
+    }
+
     .popmovie{
         display: flex;
         text-align: center;
@@ -153,6 +176,15 @@ footer p{
         height: 40px;
         display: flex;
     }
+
+    .menu {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    
     .movies{
         margin-right: 20px;
     }
@@ -166,50 +198,20 @@ footer p{
     }
     .titlelist {
         text-align: left;
+        margin-top: 25px;
+        margin-bottom: 25px;
     }
     
     section {
         margin-left: auto;
         margin-right: auto;
     }
-   
-    header nav a {
-        color: #aaa;
-        text-decoration: none;
-        margin-right: 20px;
-        font-size: 20px;
-    }
-    
-    header nav a:hover, 
-    header nav a.activo {
-        color: #fff;
-    }
-    
 
-    .menu {
-        display: flex;
-        justify-content: flex-end;
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
-
-    header .contenedor {
-        display: flex;
-        justify-content: flex-start;
-    }
-    
     .banner {
         min-height: 25.62em;
         background: url(../img/banner.png);
         background-repeat: no-repeat;
         display: flex;
-    }
-
-    .menu a {
-        margin: 0px;
-        width: 100px;
-        text-align: center;
-        margin-top: 10px;
     }
 }
 @media (min-width:1080px) {

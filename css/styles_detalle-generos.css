@@ -146,7 +146,28 @@ footer p{
     
 }
 @media (min-width:1024px) {
-    
+   
+    header {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    header .headerContainer{
+        width: 30%;
+    }
+
+    .contenedor{
+      margin: 0px;
+    }
+
+    header nav a {
+        color: #aaa;
+        text-decoration: none;
+        font-size: 22px;
+    }
+
     .popmovie{
         display: flex;
         text-align: center;
@@ -208,21 +229,9 @@ footer p{
 
     .menu {
         display: flex;
-        justify-content: flex-end;
+        justify-content: center;
         flex-direction: row;
         flex-wrap: wrap;
-    }
-
-    header .contenedor {
-        display: flex;
-        justify-content: flex-start;
-    }
-    
-    .banner {
-        min-height: 25.62em;
-        background: url(../img/banner.png);
-        background-repeat: no-repeat;
-        display: flex;
     }
 
     .menu a {
