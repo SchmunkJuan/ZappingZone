@@ -12,6 +12,7 @@
 body {
     background: var(--fondo);
     font-family: 'Fira Sans', sans-serif;
+    padding: 10px;
 }
 
 .contenedor {
@@ -134,27 +135,6 @@ footer p{
 }
 
 @media (min-width:1024px) {
-    header {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        align-items: center;
-    }
-
-    header .headerContainer{
-        width: 30%;
-    }
-
-    .contenedor{
-      margin: 0px;
-    }
-
-    header nav a {
-        color: #aaa;
-        text-decoration: none;
-        font-size: 22px;
-    }
-
     section{
         flex-direction: row;
         border-width: 20px;
@@ -196,9 +176,14 @@ footer p{
 
     .menu {
         display: flex;
-        justify-content: center;
+        justify-content: flex-end;
         flex-direction: row;
         flex-wrap: wrap;
+    }
+    
+    header .contenedor {
+        display: flex;
+        justify-content: flex-start;
     }
     
     .menu a {

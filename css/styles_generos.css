@@ -12,6 +12,7 @@
 body {
     background: var(--fondo);
     font-family: 'Fira Sans', sans-serif;
+    padding: 10px;
 }
 
 .contenedor {
@@ -53,14 +54,6 @@ header .logo {
     display: none;
 }
 
-.banner {
-    min-height: 25.62em;
-    background: url(../img/banner.png);
-    background-repeat: no-repeat;
-    display:    none;
-   
-}
-
 .menu {
     display: flex;
     justify-content: center;
@@ -75,11 +68,20 @@ header .logo {
     margin-top: 10px;
 }
 
-.titlelist {
+.titlelist{
     text-transform: uppercase;
     margin: 15px;
     color: #fe5e00;
     text-align: center;
+}
+
+.title{
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    color: #fe5e00;
+    text-align: center;
+    margin: 0;
 }
 
 .popmovie{
@@ -97,29 +99,18 @@ header .logo {
 .popmovie li{
     list-style: none;
     display: flex;
+    justify-content: space-around;
     flex-direction: column;
     align-items: center;
     border-color: rgb(39, 39, 39);
     border-style: solid;
-    border-width: 20px;
+    border-width: 35px;
     background-color: rgb(39, 39, 39);
 }
 
 .popmovie li a{
     text-decoration: none;
     color: silver;
-}
-
-.movie li{
-    border: none;
-    display: flex;
-    align-items: center;
-}
-
-.imgmovie {
-    width: 220px;
-    height: 330px;
-    margin-bottom: 10px;
 }
 
 footer p{
@@ -136,10 +127,7 @@ footer p{
     
 }
 @media (min-width:1024px) {
-   .cajaMovie{
-       display: flex;
-       justify-content: center;
-   }
+   
     header {
         display: flex;
         justify-content: space-between;
@@ -165,27 +153,18 @@ footer p{
         display: flex;
         text-align: center;
         flex-direction: row;
-        max-width: 100%;
+        max-width: 1440px;
         background-color: #fe5e00;
         justify-content: center;
+        padding: 25px 0px 25px 0px;
+        margin: 20px 0px 20px 0px;
     }
     header .logo {
         width: 40px;
         height: 40px;
         display: flex;
     }
-
-    .menu {
-        display: flex;
-        justify-content: center;
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
     
-    .movies{
-        margin-right: 20px;
-    }
-
     footer p{
         display: flex;
         align-items: center;
@@ -194,28 +173,56 @@ footer p{
         background-color: rgb(39, 39, 39);
         padding: 20px 0px 20px 0px;
     }
-
     .titlelist {
         text-align: left;
-        margin-top: 25px;
-        margin-bottom: 25px;
-        margin-left: 8%;
+        font-size: 30px;
     }
+
+    .title{
+        display: flex;
+        justify-content: center;
+        text-transform: uppercase;
+        color: #fe5e00;
+        text-align: center;
+        margin: 0;
+        font-size: 50px;
+    }    
     
     .section1 {
+        margin-left: auto;
+        margin-right: auto;
+    }
+   
+    header nav a {
+        color: #aaa;
+        text-decoration: none;
+        margin-right: 20px;
+        font-size: 20px;
+    }
+    
+    header nav a:hover, 
+    header nav a.activo {
+        color: #fff;
+    }
+    
+
+    .menu {
         display: flex;
-        justify-items: center;
-        flex-direction: column;
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
     }
 
-    .div22{
-        display: flex;
-        justify-items: center;
-        flex-direction: column;
+    .menu a {
+        margin: 0px;
+        width: 100px;
+        text-align: center;
+        margin-top: 10px;
     }
-
-    .banner {
-        display: flex;
-        margin-bottom: 5px;
+}
+@media (min-width:1080px) {
+    .section1 {
+        margin-left: 12%;
+        margin-right: auto;
     }
 }
