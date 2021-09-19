@@ -54,6 +54,13 @@ header .logo {
     display: none;
 }
 
+div.buscador.headerContainer{
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 80px;
+}
+
 .menu {
     display: flex;
     justify-content: center;
@@ -224,5 +231,9 @@ footer p{
     .section1 {
         margin-left: 12%;
         margin-right: auto;
+    }
+
+    input.busqueda {
+        font-size: medium;
     }
 }

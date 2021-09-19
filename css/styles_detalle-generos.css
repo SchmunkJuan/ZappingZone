@@ -55,11 +55,11 @@ header .logo {
     display: none;
 }
 
-.banner {
-    min-height: 25.62em;
-    background: url(../img/banner.png);
-    background-repeat: no-repeat;
-    display:    none;
+div.buscador.headerContainer{
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 80px;
 }
 
 .menu {
@@ -245,5 +245,9 @@ footer p{
     .section1 {
         margin-left: 12%;
         margin-right: auto;
+    }
+
+    input.busqueda {
+        font-size: medium;
     }
 }
