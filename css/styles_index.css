@@ -51,7 +51,14 @@ header .logo {
     width: 40px;
     height: 40px;
     display: none;
-} 
+}
+
+div.buscador.headerContainer{
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 80px;
+}
 
 .banner {
     min-height: 25.62em;
@@ -217,5 +224,9 @@ footer p{
     .banner {
         display: flex;
         margin-bottom: 5px;
+    }
+
+    input.busqueda {
+        font-size: medium;
     }
 }
