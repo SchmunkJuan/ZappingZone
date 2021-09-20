@@ -96,7 +96,7 @@ header .logo {
     display: flex;
     text-align: center;
     flex-direction: column;
-    max-width: 1440px;
+    max-width: 100%;
     background-color: #fe5e00;
     justify-content: center;
     padding: 7px 7px 7px 7px;
@@ -161,7 +161,7 @@ footer p{
         display: flex;
         text-align: center;
         flex-direction: row;
-        max-width: 1440px;
+        max-width: 100%;
         background-color: #fe5e00;
         justify-content: center;
         padding: 25px 0px 25px 0px;

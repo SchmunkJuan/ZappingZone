@@ -97,7 +97,7 @@ header .logo {
     display: flex;
     text-align: center;
     flex-direction: column;
-    max-width: 1440px;
+    max-width: 100%;
     background-color: #fe5e00;
     justify-content: center;
     padding: 25px 25px 25px 25px;
