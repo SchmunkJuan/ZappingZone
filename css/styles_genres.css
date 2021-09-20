@@ -21,7 +21,7 @@ body {
 }
 
 header {
-    padding: 30px 0;
+    padding-top: 30px;
 }
 
 header .contenedor {
@@ -58,7 +58,7 @@ header .logo {
     display: flex;
     margin-top: 20px;
     margin-bottom: 20px;
-    margin-left: 80px;
+    justify-content: center;
 }
 
 .menu {
@@ -225,15 +225,5 @@ footer p{
         width: 100px;
         text-align: center;
         margin-top: 10px;
-    }
-}
-@media (min-width:1080px) {
-    .section1 {
-        margin-left: 12%;
-        margin-right: auto;
-    }
-
-    input.busqueda {
-        font-size: medium;
     }
 }

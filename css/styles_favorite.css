@@ -22,7 +22,7 @@ body {
 }
 
 header {
-    padding: 30px 0;
+    padding-top: 30px;
 }
 
 header .contenedor {
@@ -59,7 +59,7 @@ header .logo {
     display: flex;
     margin-top: 20px;
     margin-bottom: 20px;
-    margin-left: 80px;
+    justify-content: center;
 }
 
 .menu.headerContainer {
@@ -154,7 +154,10 @@ footer p{
     
 }
 @media (min-width:1024px) {
-   
+    .cajaMovie{
+        display: flex;
+        justify-content: center;
+    }
     header {
         display: flex;
         justify-content: space-between;
@@ -180,19 +183,14 @@ footer p{
         display: flex;
         text-align: center;
         flex-direction: row;
-        max-width: 1440px;
+        max-width: 100%;
         background-color: #fe5e00;
         justify-content: center;
-        padding: 25px 0px 25px 0px;
-        margin: 20px 0px 20px 0px;
     }
     header .logo {
         width: 40px;
         height: 40px;
         display: flex;
-    }
-    .movies{
-        margin-right: 20px;
     }
     footer p{
         display: flex;
@@ -205,6 +203,7 @@ footer p{
     .tittlelist {
         text-align: left;
         font-size: 30px;
+        margin-left: 8%;
     }
 
     .tittle{
@@ -218,8 +217,9 @@ footer p{
     }    
     
     .section1 {
-        margin-left: auto;
-        margin-right: auto;
+        display: flex;
+        justify-items: center;
+        flex-direction: column;
     }
    
     header nav a {
@@ -234,7 +234,6 @@ footer p{
         color: #fff;
     }
     
-
     .menu {
         display: flex;
         justify-content: center;
@@ -247,17 +246,5 @@ footer p{
         width: 100px;
         text-align: center;
         margin-top: 10px;
-    }
-}
-
-@media (min-width:1080px) {
-    
-    .section1 {
-        margin-left: 120px;
-        margin-right: 120px;
-    }
-
-    input.busqueda {
-        font-size: medium;
     }
 }
