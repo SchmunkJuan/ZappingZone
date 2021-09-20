@@ -147,8 +147,7 @@ footer p{
     justify-content: center;
     color: silver;
     background-color: rgb(39, 39, 39);
-    margin-bottom: 0;
-    padding: 20px 0px 20px 0px;
+    padding: 20px 0px;
 }
 
 @media (min-width:768px) {
@@ -200,7 +199,7 @@ footer p{
         justify-content: center;
         color: silver;
         background-color: rgb(39, 39, 39);
-        padding: 20px 0px 20px 0px;
+        padding: 20px 0px;
     }
     .tittlelist {
         text-align: left;
