@@ -88,6 +88,12 @@ section{
     margin: 10px;
 }
 
+.div2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .movietit{
     text-transform: uppercase;
     margin: 10px;
@@ -145,6 +151,13 @@ footer p{
         display: flex;
     }
 
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 30px;
+    }
+
     .imgtit{
         height: 340px;
     }
@@ -178,7 +191,7 @@ footer p{
         display: flex;
         justify-content: flex-end;
         flex-direction: row;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
     }
     
     header .contenedor {
@@ -191,5 +204,11 @@ footer p{
         width: 100px;
         text-align: center;
         margin-top: 10px;
+    }
+
+    .div2{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
     }
 }

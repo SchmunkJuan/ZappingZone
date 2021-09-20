@@ -20,7 +20,7 @@ body {
 }
 
 header {
-    padding: 30px;
+    padding-top: 30px;
 }
 
 header .contenedor {
@@ -152,6 +152,7 @@ footer p{
         justify-content: space-between;
         flex-wrap: wrap;
         align-items: center;
+        padding: 30px;
     }
 
     header .headerContainer{
