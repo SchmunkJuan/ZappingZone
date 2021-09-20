@@ -131,9 +131,7 @@ header .logo {
 }
 
 footer p{
-    display: flex;
-    align-content: center;
-    justify-content: center;
+    text-align: center;
     color: silver;
     background-color: rgb(39, 39, 39);
     padding: 20px 0px;
