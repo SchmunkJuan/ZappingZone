@@ -241,13 +241,3 @@ footer p{
         margin-top: 10px;
     }
 }
-@media (min-width:1080px) {
-    .section1 {
-        margin-left: 12%;
-        margin-right: auto;
-    }
-
-    input.busqueda {
-        font-size: medium;
-    }
-}
