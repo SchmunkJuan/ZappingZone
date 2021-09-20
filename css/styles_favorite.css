@@ -55,7 +55,14 @@ header .logo {
     display: none;
 }
 
-div.buscador.headerContainer{
+.buscador.headerContainer{
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 80px;
+}
+
+.menu.headerContainer {
     display: flex;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -67,6 +74,7 @@ div.buscador.headerContainer{
     justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
+    
 }
 
 .menu a {
@@ -76,14 +84,14 @@ div.buscador.headerContainer{
     margin-top: 10px;
 }
 
-.titlelist{
+.tittlelist{
     text-transform: uppercase;
     margin: 15px;
     color: #fe5e00;
     text-align: center;
 }
 
-.title{
+.tittle{
     display: flex;
     justify-content: center;
     text-transform: uppercase;
@@ -194,12 +202,12 @@ footer p{
         background-color: rgb(39, 39, 39);
         padding: 20px 0px 20px 0px;
     }
-    .titlelist {
+    .tittlelist {
         text-align: left;
         font-size: 30px;
     }
 
-    .title{
+    .tittle{
         display: flex;
         justify-content: center;
         text-transform: uppercase;
@@ -239,5 +247,17 @@ footer p{
         width: 100px;
         text-align: center;
         margin-top: 10px;
+    }
+}
+
+@media (min-width:1080px) {
+    
+    .section1 {
+        margin-left: 120px;
+        margin-right: 120px;
+    }
+
+    input.busqueda {
+        font-size: medium;
     }
 }

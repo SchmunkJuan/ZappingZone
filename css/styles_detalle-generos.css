@@ -55,7 +55,7 @@ header .logo {
     display: none;
 }
 
-div.buscador.headerContainer{
+.buscador.headerContainer{
     display: flex;
     margin-top: 20px;
     margin-bottom: 20px;
