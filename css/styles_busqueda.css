@@ -1,0 +1,220 @@
+:root {
+    --naraja: rgb(255, 94, 0);
+    --fondo: rgb(39, 39, 39);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--fondo);
+    font-family: 'Fira Sans', sans-serif;
+}
+
+.contenedor {
+    width: 100%;
+    margin: auto;
+}
+
+header {
+    padding-top: 30px;
+}
+
+header .contenedor {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+header .titulo {
+    font-weight: normal;
+    color: var(--naraja);
+    font-size: 40px;
+    font-family: 'Comfortaa', cursive;
+}
+
+header nav a {
+    color: #aaa;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+header nav a:hover, 
+header nav a.activo {
+    color: #fff;
+}
+
+header .logo {
+    width: 40px;
+    height: 40px;
+    display: none;
+}
+
+.buscador.headerContainer{
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    justify-content: center;
+    font-size: medium;
+}
+
+.banner {
+    min-height: 25.62em;
+    background: url(../img/banner.png);
+    background-repeat: no-repeat;
+    display:    none;
+   
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.menu a {
+    margin: 0px;
+    width: 100px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.titlelist {
+    text-transform: uppercase;
+    margin: 15px;
+    color: #fe5e00;
+    text-align: center;
+}
+
+.popmovie{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    max-width: 100%;
+    background-color: #fe5e00;
+    justify-content: center;
+    padding: 25px 25px 25px 25px;
+    margin: 20px 0px 20px 0px;
+    color: silver;
+}
+
+.popmovie li{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-color: rgb(39, 39, 39);
+    border-style: solid;
+    border-width: 20px;
+    background-color: rgb(39, 39, 39);
+}
+
+.popmovie li a{
+    text-decoration: none;
+    color: silver;
+}
+
+.movie li{
+    border: none;
+    display: flex;
+    align-items: center;
+}
+
+.imgmovie {
+    width: 220px;
+    height: 330px;
+    margin-bottom: 10px;
+}
+
+footer p{
+    text-align: center;
+    color: silver;
+    background-color: rgb(39, 39, 39);
+    padding: 20px 0px;
+}
+
+@media (min-width:768px) {
+    
+}
+@media (min-width:1024px) {
+   .cajaMovie{
+       display: flex;
+       justify-content: center;
+   }
+    header {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: center;
+        padding: 30px;
+    }
+
+    header .headerContainer{
+        width: 30%;
+    }
+
+    .contenedor{
+      margin: 0px;
+    }
+
+    header nav a {
+        color: #aaa;
+        text-decoration: none;
+        font-size: 22px;
+    }
+
+    .popmovie{
+        display: flex;
+        text-align: center;
+        flex-direction: row;
+        max-width: 100%;
+        background-color: #fe5e00;
+        justify-content: center;
+    }
+    header .logo {
+        width: 40px;
+        height: 40px;
+        display: flex;
+    }
+
+    .menu {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    .movies{
+        margin-right: 20px;
+    }
+
+    footer p{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: silver;
+        background-color: rgb(39, 39, 39);
+        padding: 20px 0px;
+    }
+
+    .titlelist {
+        text-align: left;
+        margin-top: 25px;
+        margin-bottom: 25px;
+        margin-left: 8%;
+    }
+    
+    .section1 {
+        display: flex;
+        justify-items: center;
+        flex-direction: column;
+    }
+
+    input.busqueda {
+        font-size: medium;
+    }
+}
