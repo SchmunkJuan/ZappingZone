@@ -132,6 +132,11 @@ footer p{
     
 }
 @media (min-width:1024px) {
+
+    .cajaMovie{
+        display: flex;
+        justify-content: center;
+    }
    
     header {
         display: flex;
@@ -162,9 +167,10 @@ footer p{
         max-width: 100%;
         background-color: #fe5e00;
         justify-content: center;
-        padding: 25px 0px 25px 0px;
+        padding: 25px 25px 25px 25px;
         margin: 20px 0px 20px 0px;
     }
+
     header .logo {
         width: 40px;
         height: 40px;
@@ -182,6 +188,7 @@ footer p{
     .titlelist {
         text-align: left;
         font-size: 30px;
+        margin-left: 8%;
     }
 
     .title{
