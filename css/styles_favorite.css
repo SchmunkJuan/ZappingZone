@@ -108,8 +108,8 @@ header .logo {
     max-width: 100%;
     background-color: #fe5e00;
     justify-content: center;
-    padding: 25px 25px 25px 25px;
-    margin: 20px 0px 20px 0px;
+    padding: 25px;
+    margin: 20px 0px;
     color: silver;
 }
 
