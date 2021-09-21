@@ -28,12 +28,14 @@
             <a class="activo" href="./favorite.html">Favoritos</a>
             <a class="activo" href="./genres.html">Generos</a>
         </nav>
-        <div class="buscador headerContainer">
-            <a href="resultado-busqueda.html" class="busqueda">
-                <button type="submit">&#128270;</button>
-            </a>
-            <input type="text" class="busqueda" placeholder="Busqueda" name="Busqueda">
-        </div>
+        <form action="./resultado-busqueda.html" method="GET"></form>
+            <div class="buscador headerContainer">
+                <a href="resultado-busqueda.html" class="busqueda">
+                    <button type="submit">&#128270;</button>
+                </a>
+                <input type="text" class="busqueda" placeholder="Busqueda" name="Busqueda">
+            </div>
+        </form>
     </header>
     <section class="section1">
         <h2 class="titlelist">Resultado de Busqueda para: "Vikings"</h2>
@@ -149,6 +151,9 @@
                 </li>
             </ul>
         </div>
+    </section>
+    <section class="resultadosNo">
+        <h1>no se encontraron Resultados</h1>
     </section>
     <footer>
         <p>Juan Ignacio Schmunk | Malena Krompolcas | Martina Coletto</p>
