@@ -43,11 +43,6 @@ header nav a {
     margin-right: 20px;
 }
 
-header nav a:hover, 
-header nav a.activo {
-    color: #fff;
-}
-
 header .logo {
     width: 40px;
     height: 40px;
@@ -132,7 +127,7 @@ footer p{
     
 }
 @media (min-width:1024px) {
-
+    
     .cajaMovie{
         display: flex;
         justify-content: center;
@@ -152,12 +147,6 @@ footer p{
 
     .contenedor{
       margin: 0px;
-    }
-
-    header nav a {
-        color: #aaa;
-        text-decoration: none;
-        font-size: 22px;
     }
 
     .popmovie{
@@ -206,18 +195,14 @@ footer p{
         margin-right: auto;
     }
    
-    header nav a {
+    header nav{
         color: #aaa;
         text-decoration: none;
         margin-right: 20px;
         font-size: 20px;
+        border: 15px;
+        border-color: #fe5e00;
     }
-    
-    header nav a:hover, 
-    header nav a.activo {
-        color: #fff;
-    }
-    
 
     .menu {
         display: flex;
@@ -232,4 +217,5 @@ footer p{
         text-align: center;
         margin-top: 10px;
     }
+
 }
