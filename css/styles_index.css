@@ -145,6 +145,7 @@ footer p{
    .cajaMovie{
        display: flex;
        justify-content: center;
+       
    }
    
     header {
@@ -177,6 +178,7 @@ footer p{
         background-color: #fe5e00;
         justify-content: center;
     }
+
     header .logo {
         width: 40px;
         height: 40px;
@@ -193,7 +195,7 @@ footer p{
     .movies{
         margin-right: 20px;
     }
-
+    
     footer p{
         display: flex;
         align-items: center;

@@ -57,6 +57,11 @@ header .logo {
     font-size: medium;
 }
 
+header nav a:hover, 
+header nav a.activo {
+        color: #fff;
+    }
+
 .menu {
     display: flex;
     justify-content: center;
@@ -216,6 +221,11 @@ footer p{
         width: 100px;
         text-align: center;
         margin-top: 10px;
+    }
+
+    header nav a:hover, 
+    header nav a.activo {
+        color: #fff;
     }
 
 }

@@ -1,20 +1,19 @@
-
 fetch('https://api.themoviedb.org/3/movie/popular?api_key=18244799e13812364e948bca9d25aff1&page=1')
 
-	.then(function(response){
-	return response.json();
-})
-	.then(function(data){
-    console.log(data);
-    
-    let info = data.results
-    let lista = document.querySelector(".popmovie")
-    let moviespop = ""
+	.then(function(response) {
+		return response.json();
+	})
+	.then(function(data) {
+		console.log(data);
 
-    for(let i=0; i<5; i++){
-        console.log(info[i]);
-        moviespop += 
-        `<li class="movies">
+		let info = data.results
+		let lista = document.querySelector(".popmovie")
+		let moviespop = ""
+
+		for (let i = 0; i < 5; i++) {
+			console.log(info[i]);
+			moviespop +=
+				`<li class="movies">
             <ul class="movie">
                 <a href="detalle_movie.html">
                     <img class="imgmovie" src="${ "https://image.tmdb.org/t/p/original" + data.results[i].poster_path}">
@@ -24,31 +23,31 @@ fetch('https://api.themoviedb.org/3/movie/popular?api_key=18244799e13812364e948b
                         <li>Rating: ${info[i].vote_average}</li>
             </ul>
         </li>`
-    }
+		}
 
-    console.log(moviespop)
-    lista.innerHTML += moviespop;
-})
-	.catch(function(error){
-	console.log('El error fue: ' + error);
-})
+		console.log(moviespop)
+		lista.innerHTML += moviespop;
+	})
+	.catch(function(error) {
+		console.log('El error fue: ' + error);
+	})
 
 fetch('https://api.themoviedb.org/3/movie/top_rated?api_key=18244799e13812364e948bca9d25aff1&page=1')
 
-	.then(function(response){
-	return response.json();
-})
-	.then(function(data){
-    console.log(data);
-    
-    let info = data.results
-    let lista = document.querySelector("#popmovie2")
-    let moviesval= ""
+	.then(function(response) {
+		return response.json();
+	})
+	.then(function(data) {
+		console.log(data);
 
-    for(let i=0; i<5; i++){
-        console.log(info[i]);
-        moviesval+= 
-        `<li class="movies">
+		let info = data.results
+		let lista = document.querySelector("#popmovie2")
+		let moviesval = ""
+
+		for (let i = 0; i < 5; i++) {
+			console.log(info[i]);
+			moviesval +=
+				`<li class="movies">
             <ul class="movie">
                 <a href="detalle_movie.html">
                     <img class="imgmovie" src="${ "https://image.tmdb.org/t/p/original" + data.results[i].poster_path}">
@@ -58,31 +57,31 @@ fetch('https://api.themoviedb.org/3/movie/top_rated?api_key=18244799e13812364e94
                         <li>Rating: ${info[i].vote_average}</li>
             </ul>
         </li>`
-    }
+		}
 
-    console.log(moviesval)
-    lista.innerHTML += moviesval;
-})
-	.catch(function(error){
-	console.log('El error fue: ' + error);
-})
+		console.log(moviesval)
+		lista.innerHTML += moviesval;
+	})
+	.catch(function(error) {
+		console.log('El error fue: ' + error);
+	})
 
 fetch('https://api.themoviedb.org/3/tv/popular?api_key=18244799e13812364e948bca9d25aff1&page=1')
 
-	.then(function(response){
-	return response.json();
-})
-	.then(function(data){
-    console.log(data);
-    
-    let info = data.results
-    let lista = document.querySelector("#series")
-    let seriespop = ""
+	.then(function(response) {
+		return response.json();
+	})
+	.then(function(data) {
+		console.log(data);
 
-    for(let i=0; i<5; i++){
-        console.log(info[i]);
-        seriespop+= 
-        `<li class="movies">
+		let info = data.results
+		let lista = document.querySelector("#series")
+		let seriespop = ""
+
+		for (let i = 0; i < 5; i++) {
+			console.log(info[i]);
+			seriespop +=
+				`<li class="movies">
         <ul class="movie">
             <a href="detalle_series.html">
                 <img class="imgmovie" src="${"https://image.tmdb.org/t/p/original" + data.results[i].poster_path}" alt="">
@@ -92,11 +91,11 @@ fetch('https://api.themoviedb.org/3/tv/popular?api_key=18244799e13812364e948bca9
             <li>Raiting:${info[i].vote_average}</li>
         </ul>
         </li>`
-    }
+		}
 
-    console.log(seriespop)
-    lista.innerHTML += seriespop;
-})
-	.catch(function(error){
-	console.log('El error fue: ' + error);
-})
+		console.log(seriespop)
+		lista.innerHTML += seriespop;
+	})
+	.catch(function(error) {
+		console.log('El error fue: ' + error);
+	})
