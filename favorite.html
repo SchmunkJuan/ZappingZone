@@ -12,14 +12,16 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Fira+Sans:ital,wght@1,500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+
+    <script src="./js/favotite.js"></script>
 </head>
 <body>
     <header>
         <div class="contenedor headerContainer">
             <img src="./img/ZappingZone6.png" class="logo">
-            <h1 class="titulo">ZappingZone</h1>
+            <h1 class="titulo">ZappingZone</h2>
         </div>
-        <nav class="menu header.Container">
+        <nav class="menu headerContainer">
             <a class="activo" href="index.html">Home</a>
             <a class="activo" href="favorite.html">Favoritos</a>
             <a class="activo" href="genres.html">Generos</a>
@@ -32,191 +34,17 @@
             <p class="mensaje"></p>
         </form>
     </header>
+
     <script src="./js/buscador.js"></script>
+
     <main>
         <section>
-            <h2 class="tittle">Favoritos</h2>
+            <h2 class="title"></h2>
         </section>
 
         <section class="section1">
-            <h3 class="tittlelist">Series</h3>
             <div class="cajaMovie">
-                <ol class="popmovie">
-                    <li class="movies">
-                        <ul class="movie">
-                            <a href="detalle_series.html">
-                                <img class="imgmovie" src="./img/PeakyBlinders.jpg" alt="">
-                                <li>Peaky Blinders</li>
-                            </a>
-                            <li>2013</li>
-                            <li>Rating: 8.8/10</li>
-                            <a href="#" class="favorite">
-                                <button type="submit">
-                                    <i class="fas fa-check"></i>
-                                    <i class="fas fa-heart"></i>
-                                </button>
-                            </a>
-                        </ul>
-                    </li>
-
-                    <li class="movies">
-                        <ul class="movie">
-                            <a href="detalle_series.html">
-                                <img class="imgmovie" src="./img/Vikings.jpg" alt="">
-                                <li>Vikings</li>
-                            </a>
-                            <li>2013-2020</li>
-                            <li>Rating: 8.5/10</li>
-                            <a href="#" class="favorite">
-                                <button type="submit">
-                                    <i class="fas fa-check"></i>
-                                    <i class="fas fa-heart"></i>
-                                </button>
-                            </a>
-                        </ul>
-                    </li>
-
-                    <li class="movies">
-                        <ul class="movie">
-                            <a href="detalle_series.html">
-                                <img class="imgmovie" src="./img/got.jpg" alt="">
-                                <li>Game of Thrones</li>
-                            </a>
-                            <li>2011-2019</li>
-                            <li>Rating: 9.2/10</li>
-                            <a href="#" class="favorite">
-                                <button type="submit">
-                                    <i class="fas fa-check"></i>
-                                    <i class="fas fa-heart"></i>
-                                </button>
-                            </a>
-                        </ul>
-                    </li>
-
-                    <li class="movies">
-                        <ul class="movie">
-                            <a href="detalle_series.html">
-                                <img class="imgmovie" src="./img/BreakingBad.jpg" alt="">
-                                <li>Breaking Bad</li>
-                            </a>
-                            <li>2008-2013</li>
-                            <li>Rating: 9.4/10</li>
-                            <a href="#" class="favorite">
-                                <button type="submit">
-                                    <i class="fas fa-check"></i>
-                                    <i class="fas fa-heart"></i>
-                                </button>
-                            </a>
-                        </ul>
-                    </li>
-
-                    <li class="movies">
-                        <ul class="movie">
-                            <a href="detalle_series.html">
-                                <img class="imgmovie" src="./img/YoungRoyals.jpg" alt="">
-                                <li>Young Royals</li>
-                            </a>
-                            <li>2021</li>
-                            <li>Rating: 8.6/10</li>
-                            <a href="#" class="favorite">
-                                <button type="submit">
-                                    <i class="fas fa-check"></i>
-                                    <i class="fas fa-heart"></i>
-                                </button>
-                            </a>
-                        </ul>
-                    </li>
-                </ol>
-            </div>
-        </section>
-
-        <section class="section1">
-            <h3 class="tittlelist">Peliculas</h3>
-            <div class="cajaMovie">
-                <ol class="popmovie">
-                    <li class="movies">
-                        <ul class="movie">
-                            <a href="detalle_mvmovie.html">
-                                <img class="imgmovie" src="./img/DarkKnight.jpg" alt="The Dark Knight">
-                                <li>The Dark Knight</li>
-                            </a>
-                            <li>2001</li>
-                            <li>Rating: 8.8/10</li>
-                            <a href="#" class="favorite">
-                                <button type="sumit">
-                                    <i class="fas fa-check"></i>
-                                    <i class="fas fa-heart"></i>
-                                </button>
-                            </a>
-                        </ul>
-                    </li>
-                    <li class="movies">
-                        <ul class="movie">
-                            <a href="detalle_mvmovie.html">
-                                <img class="imgmovie" src="./img/SavingPrivateRyan.jpg" alt="Saving Private Ryan">
-                                <li>Saving Private Ryan</li>
-                            </a>
-                            <li>1998</li>
-                            <li>Rating: 8.6/10</li>
-                            <a href="#" class="favorite">
-                                <button type="sumit">
-                                    <i class="fas fa-check"></i>
-                                    <i class="fas fa-heart"></i>
-                                </button>
-                            </a>
-                        </ul>
-                    </li>
-        
-                    <li class="movies">
-                        <ul class="movie">
-                            <a href="./detalle_mvmovie.html">
-                                <img class="imgmovie" src="./img/titanic.jpg" alt="">
-                                <li>Titanic</li>
-                            </a>
-                            <li>1997</li>
-                            <li>Rating: 7.8/10</li>
-                            <a href="#" class="favorite">
-                                <button type="sumit">
-                                    <i class="fas fa-check"></i>
-                                    <i class="fas fa-heart"></i>
-                                </button>
-                            </a>
-                        </ul>
-                    </li>
-        
-                    <li class="movies">
-                        <ul class="movie">
-                            <a href="detalle_mvmovie.html">
-                                <img class="imgmovie" src="./img/ShawshankRedemption.jpg" alt="The Shawshank Redemption">
-                                <li>The Shawshank Redemption</li>
-                            </a>
-                            <li>1994</li>
-                            <li>Rating: 9.3/10</li>
-                            <a href="#" class="favorite">
-                                <button type="sumit">
-                                    <i class="fas fa-check"></i>
-                                    <i class="fas fa-heart"></i>
-                                </button>
-                            </a>
-                        </ul>
-                    </li>
-        
-                    <li class="movies">
-                        <ul class="movie">
-                            <a href="detalle_mvmovie.html">
-                                <img class="imgmovie" src="./img/SchindlersList.jpg" alt="">
-                                <li>Schindler's List</li>
-                            </a>
-                            <li>1993</li>
-                            <li>Rating: 8.9/10</li>
-                            <a href="#" class="favorite">
-                                <button type="sumit">
-                                    <i class="fas fa-check"></i>
-                                    <i class="fas fa-heart"></i>
-                                </button>
-                            </a>
-                        </ul>
-                    </li>
+                <ol class="popmovie" >
                 </ol>
             </div>
         </section>
