@@ -25,7 +25,8 @@ if(favoritos == null || favoritos.length == 0){
 
 function buscarYMostarFavoritos(id){
     //fetch para buscar cada elemento del array. 
-    let url = `https://rickandmortyapi.com/api/character/${id}`
+    let url = `https://api.themoviedb.org/3/movie/550?api_key=dc595f48c885d38c5c9265bb69a0626c
+    ${id}`
 
     fetch(url)
         .then( function(response){
@@ -48,3 +49,50 @@ function buscarYMostarFavoritos(id){
         })
 
 }
+
+
+
+
+
+//Boton de Favoritos
+
+//Creo array a rellenar de peliculas favoritas
+let peliculasFav = []
+
+//Recupero el storage
+let recuperoStorage = localStorage.getItem('peliculasFav');
+
+//Reviso si el id ya esta en favoritos
+if (recuperoStorage != null){ //Sucede si hay datos en el storage
+    peliculasFav = JSON.parse(recuperoStorage);
+}
+
+//Capturo el elemento en el DOM
+let fav = document.querySelector('.favoritos');
+let botonFav = document.querySelector('.botonFav')
+
+if(peliculasFav.includes(id)){
+    botonFav.innerText = 'Quitar de Favoritos'
+}
+
+fav.addEventListener('click', function(evento){
+    evento.preventDefault();
+
+    //En el caso de que la pelicula ya este en favoritos y el usuario quiera sacarla
+    if (peliculasFav.includes(id)){
+        let indice = peliculasFav.indexOf(id);
+        peliculasFav.splice(indice, 1);
+        botonFav.innerText = 'Agregar a Favoritos'
+
+    else {
+    //En el caso de que la pelicula no este en favoritos
+        peliculasFav.push(id);
+        botonFav.innerHTML = 'Quitar de Favoritos';
+    }
+    console.log(peliculasFav);
+    //Guardo el array en el storage
+    let favToStirng = JSON.stringify(peliculasFav); //Se transforma al array en una cadena de texto
+
+    localStorage.setItem('peliculasFav', favToStirng) //Guardo la info en el storage
+    }
+})
