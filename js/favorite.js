@@ -84,7 +84,7 @@ fav.addEventListener('click', function(evento){
         peliculasFav.splice(indice, 1);
         botonFav.innerText = 'Agregar a Favoritos'
 
-    else {
+    } else {
     //En el caso de que la pelicula no este en favoritos
         peliculasFav.push(id);
         botonFav.innerHTML = 'Quitar de Favoritos';
