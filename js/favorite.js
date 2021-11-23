@@ -22,7 +22,7 @@ if(favoritosPeliculas == null || favoritosPeliculas.length == 0) {
 } 
 
 function buscarYMostrarFavoritosPeliculas(id) {
-    let url =`https://api.themoviedb.org/3/movie/${idSerie}?api_key=a070d8766877ff453cfcafc5a8c99cec`
+    let url =`https://api.themoviedb.org/3/movie/${id}?api_key=a070d8766877ff453cfcafc5a8c99cec`
     
     fetch(url)
           .then(function (response) {

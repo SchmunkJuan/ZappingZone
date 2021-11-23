@@ -68,22 +68,22 @@ if(recuperoStorage != null){
 let fav= document.querySelector('.fav');
 
 //Chequear que el id esté en el array de favoritos
-if(seriesFavoritos.includes(idSerie)){
+if(seriesFavoritos.includes(id)){
     fav.innerText="Quitar de favoritos";
 }
 
 fav.addEventListener('click', function(evento){
     evento.preventDefault();
 
-    if(seriesFavoritos.includes(idSerie)) {
+    if(seriesFavoritos.includes(id)) {
         //Si el id está en el array.
-        let indice = favoritos.indexOf(idSerie);
+        let indice = favoritos.indexOf(id);
         //Borrar a partir del índice, un elemento.
         serieFavoritos.splice(indice, 1)
         fav.innerText="Agregar a favoritos"
     } else {
          //Agregar un dato al array.
-        seriesFavoritos.push(idSerie);
+        seriesFavoritos.push(id);
         fav.innerText="Quitar de favoritos";
     }
  

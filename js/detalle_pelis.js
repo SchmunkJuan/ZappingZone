@@ -78,7 +78,7 @@ window.addEventListener('load', function(){
     
         if(peliculasFavoritos.includes(id)) {
             //Si el id está en el array.
-            let indice = favoritos.indexOf(id);
+            let indice = peliculasFavoritos.indexOf(id);
             //Borrar a partir del índice, un elemento.
             peliculasFavoritos.splice(indice, 1)
             fav.innerText="Agregar a favoritos"
