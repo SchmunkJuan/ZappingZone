@@ -15,63 +15,70 @@ let section = document.querySelector('.lista');
 
 //Si el storage está vacío indicamos al usuario que no hay favoritos seleccionados.
 if(favoritosPeliculas == null || favoritosPeliculas.length == 0) {
-    section.innerHTML='<p>No hay favoritos seleccionados</p>'
+    section.innerHTML="<p>No hay favoritos seleccionados</p>"
 } else {
     for (let i=0; i<favoritosPeliculas.length; i++){
         buscarYMostarFavoritos(favoritosPeliculas[i]);
-    }
+} 
+
+function buscarYMostrarFavoritosPeliculas(id) {
+    let url =`https://api.themoviedb.org/3/movie/${idSerie}?api_key=a070d8766877ff453cfcafc5a8c99cec`
     
-    function buscarYMostrarFavoritosPeliculas(id) {
-        fetch(`https://api.themoviedb.org/3/movie/${idSerie}?api_key=a070d8766877ff453cfcafc5a8c99cec`)
+    fetch(url)
           .then(function (response) {
             return response.json();
           })
           .then(function (data) {
-            if (data) {
-              document.querySelector(".tapas").innerHTML += `
-            <li>  
-              <a href="detalle_pelis.html?id=${id}">
-                <img src=''>
-                <p>${data.title}</p>
-              </a>
-            </li>`;
-            }
-          })
+              console.log(data);
+              favoritosPeliculas += `<article>
+                <img src=${data.image}>
+                <p>Calificacion: ${data.vote_average}</p>
+                <p>Duracion: ${data.runtime}</p>
+                <p>Estreno: ${data.realease_date}</p>
+                <p>Sinopsis: ${data.overview}</p>
+                </article>`
+
+                section.innerHTML=favoritosPeliculas
+            })
           .catch(function (error) {
             console.log(error);
           });    
     }
-
-    
 }
+
 if(favoritosSerie == null || favoritosSerie.length == 0) {
-    section.innerHTML='<p>No hay favoritos seleccionados</p>'
+    section.innerHTML="<p>No hay favoritos seleccionados</p>"
 } else {
     for (let i=0; i<favoritosSerie.length; i++){
         buscarYMostarFavoritos(favoritosSerie[i]);
-    }
-    function buscarYMostrarFavoritosSerie(id) {
-        fetch(`https://api.themoviedb.org/3/tv/88?api_key=a070d8766877ff453cfcafc5a8c99cec${idSerie}`)
-            .then(function (response) {
+} 
+
+function buscarYMostrarFavoritosSeries(id) {
+    let url =`https://api.themoviedb.org/3/tv/${id}?api_key=a070d8766877ff453cfcafc5a8c99cec`
+    
+    fetch(url)
+          .then(function (response) {
             return response.json();
+          })
+          .then(function (data) {
+              console.log(data);
+              favoritosPeliculas += `<article>
+                <img src=${data.image}>
+                <p>Calificacion: ${data.vote_average}</p>
+                <p>Duracion: ${data.runtime}</p>
+                <p>Estreno: ${data.realease_date}</p>
+                <p>Sinopsis: ${data.overview}</p>
+                </article>`
+
+                section.innerHTML=favoritosPeliculas
             })
-            .then(function (data) {
-            if (data) {
-                console.log(data.title);
-                document.querySelector(".tapas").innerHTML += `
-                <li>  
-                    <a href="detalle_serie.html?id=${id}">
-                        <img src=''>
-                        <p>${data.name}</p>
-                    </a>
-                </li>`;
-                }
-            })
-            .catch(function (error) {
+          .catch(function (error) {
             console.log(error);
-        });
+          });    
     }
 }
+
+
 
 //Boton de Favoritos
 
