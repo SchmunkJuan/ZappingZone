@@ -14,7 +14,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Fira+Sans:ital,wght@1,500&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
-    <script src="./js/buscador.js"></script>
 </head>
 
 <body>
@@ -28,41 +27,27 @@
             <a class="activo" href="favorite.html">Favoritos</a>
             <a class="activo" href="genres.html">Generos</a>
         </nav>
-        <form action="resultado-busqueda.html" method="GET">
+        <form class="form" action="resultado-busqueda.html" method="GET">
             <div class="buscador headerContainer">
                 <button type="submit">&#128270;</button>
-                <input type="text" class="Busqueda" placeholder="Busqueda" name="Busqueda" value="" />
+                <input type="text" class="Busqueda" placeholder="Busqueda" name="busqueda" value="" />
+                <p class="mensaje"></p>
             </div>
-            <p class="mensaje"></p>
         </form>
     </header>
-    <script src="./js/buscador.js"></script>
-    <section class="section1">
-        <h2 class="titlelist">Resultado de Busqueda para: "Vikings"</h2>
-        <div class="cajaMovie">
-            <ol class="popmovie">
-                <li>
-                    <ul class="movie">
-                        <a href="">
-                            <img class="imgmovie" src="" alt="">
-                            <li></li>
-                        </a>
-                        <li></li>
-                        <li></li>
-                        <a href="" class="favorite">
-                            <button type="submit">
-                                <i class="fas fa-plus"></i>
-                                <i class="fas fa-heart"></i>
-                            </button>
-                        </a>
-                    </ul>
-                </li>
-            </ol>
-        </div>
-    </section>
-    <section class="resultadoNo">
-        <h1 class="titlelist"></h1>
-    </section>
+        <script src="./js/search_results.js"></script>
+
+    <main>
+        <section>
+            <h2 class="searchTitle"></h2>
+        </section>
+        <section class="section1">
+                <ol class="containerPelis"></ol>
+
+        </section>
+        <h2 class="message"></h2>
+
+    </main>
     <footer>
         <p>Juan Ignacio Schmunk | Malena Krompolcas | Martina Coletto</p>
     </footer>
