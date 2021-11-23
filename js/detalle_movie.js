@@ -15,7 +15,7 @@ fetch(url)
 
         let title = document.querySelector('h1');
         let image = document.querySelector('img');
-        let calificacion = document.querySelector('.calificacion');
+        let calificacion = document.querySelector('#calificacion');
         let estreno = document.querySelector('.estreno');
         let sinopsis = document.querySelector('.sinopsis');
         let genero = document.querySelector('.genero');
@@ -32,50 +32,35 @@ fetch(url)
     .catch(function(error){
         console.log(error);
     })
+    
+let favoritos = [];
+
+let recuperoStorage = localStorage.getItem('favoritos');
+
+if(recuperoStorage != null){
+    favoritos = JSON.parse(recuperoStorage);
 }
-    
-        //Crear un array que iremos completando con datos.
-    let peliculasFavoritos = [];
-    
-    
-    //Recuperar storage
-    let recuperoStorage = localStorage.getItem('favoritosPeliculas');
-    
-    if(recuperoStorage != null){
-        //1ro tenemos que transformarlo de cadena de texto y después lo guardamos en favoritos.
-        seriesFavoritos = JSON.parse(recuperoStorage);
-    }
-    
-    //Hacer click en el link. Primero debemos capturar el elemnto.
-    let fav= document.querySelector('.fav');
-    
-    //Chequear que el id esté en el array de favoritos
-    if(peliculasFavoritos.includes(id)){
+
+let fav = document.querySelector('fav');
+
+if(favoritos.includes(id)){
+    fav.innerText="Quitar de favoritos";
+}
+
+fav.addEventListener('click', function(evento){
+    evento.preventDefault();
+
+    if(favoritos.includes(id)){
+        let indice = favoritos.indexOf(id);
+        favoritos.splice(indice, 1)
+        fav.innerText="Agregar a favoritos"
+    } else {
+        favoritos.push(id)
         fav.innerText="Quitar de favoritos";
     }
-    
-    fav.addEventListener('click', function(evento){
-        evento.preventDefault();
-    
-        if(peliculasFavoritos.includes(id)) {
-            //Si el id está en el array.
-            let indice = peliculasFavoritos.indexOf(id);
-            //Borrar a partir del índice, un elemento.
-            peliculasFavoritos.splice(indice, 1)
-            fav.innerText="Agregar a favoritos"
-        } else {
-             //Agregar un dato al array.
-            peliculasFavoritos.push(id);
-            fav.innerText="Quitar de favoritos";
-        }
-     
-        console.log(localStorage
-            )
-        //Guardar el array en el storage
-        let favsToString = JSON.stringify(peliculasFavoritos); //Transformamos el array en una cadena de texto.
-        localStorage.setItem('favoritosPeliculas', favsToString); //Guardamos el array en el storage.
-    
-    
-    })
-    
-    })
+
+    let favsToString = JSON.stringify(favoritos);
+    localStorage.setItem('favoritos', favsToString);
+
+    console.log(localStorage);
+})
