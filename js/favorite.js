@@ -15,7 +15,7 @@ let section = document.querySelector('.lista');
 
 //Si el storage está vacío indicamos al usuario que no hay favoritos seleccionados.
 if(favoritosPeliculas == null || !favoritosPeliculas || favoritosPeliculas.length) {
-    section.innerHTML +='h2';
+    section.innerHTML='<p>No hay favoritos seleccionados</p>'
 } else {
     if (favoritosPeliculas != null | favoritosPeliculas) {
         favoritosPeliculas.forEach((id) => {
@@ -48,7 +48,7 @@ if(favoritosPeliculas == null || !favoritosPeliculas || favoritosPeliculas.lengt
     
 }
 if(favoritosSerie == null || !favoritosSerie || favoritosSerie.length) {
-    section.innerHTML='h2'
+    section.innerHTML='<p>No hay favoritos seleccionados</p>'
 } else {
     if (favoritosSerie != null | favoritosSerie) {
         favoritosSerie.forEach((id) => {
