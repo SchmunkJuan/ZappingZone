@@ -18,7 +18,7 @@ formulario.addEventListener('submit', function(evento){
 
 inputField.addEventListener('focus', function(){
     MessageChannel.innerText = '' ;
-    inputField.style.outline = "1px solid auto"
+    inputField.style.outline = " auto"
 })
 
 /*search*/
