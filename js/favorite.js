@@ -120,4 +120,4 @@ fav.addEventListener('click', function(evento){
 
     localStorage.setItem('peliculasFav', favToStirng) //Guardo la info en el storage
     }
-})
+);
