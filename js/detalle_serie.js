@@ -38,7 +38,7 @@ fetch(url)
         for(let i = 0; i <infoGeneros.length; i++) {
             arrayGeneros +=
             <li>
-                <p><a href="detalle_genero_series.html?id=${infoGeneros[i].id}&title=${infoGeneros[i].name}">${infoGeneros[i].name}
+                <p><a href="detalle_genero_series.html?id=${infoGeneros[i].id}&title=${infoDetalleS[i].name}">${infoDetalleS[i].name}"
                 </a></p>
             </li>
         }
