@@ -14,9 +14,7 @@ fetch(url)
     .then(function(data){
         console.log(data)
         
-        let title = document.querySelector('h2')
-
-        title.innerHTML = genero
+        document.querySelector('h2').innerHTML = genero
         
         let info = data.results
         let detalle_generos = ""
@@ -36,8 +34,7 @@ fetch(url)
         </li>`
         }
         
-        let detalle = document.querySelector('.popmovie')
-		detalle.innerHTML = detalle_generos
+        document.querySelector('.popmovie').innerHTML = detalle_generos
     })
     .catch(function(error){
 		console.log('El error fue: ' + error);

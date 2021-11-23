@@ -13,33 +13,39 @@ fetch(url)
     .then(function(data){
         // console.log(data);
 
-        let movies = ""
-        let info1 = data.results
+       //Paso 1: capturar DOM.
+       let title = document.querySelectorAll('h1')[1];
+           let image = document.querySelectorAll('img')[1];
+           let calificacion = document.querySelector('.calificacion');
+           let estreno = document.querySelector('.estreno');
+           let duracion = document.querySelector('.duracion')
+           let sinopsis = document.querySelector('.sinopsis');
+           let genero = document.querySelector('.genero');
+    
+           //Paso 2 y 3: actualizar datos y actualizar DOM;
+           title.innerText = data.title;
+           image.src = `${ "https://image.tmdb.org/t/p/original" + data.poster_path}`
+           calificacion.innerHTML += data.vote_average; 
+           duracion.innerText += data.runtime;   
+           estreno.innerText += data.release_date;
+           sinopsis.innerText += data.overview;
 
-        document.querySelector('.seccionseries').innerHTML
+        let infoGeneros = data.genres;
+        let arrayGeneros = "";
 
-        for (let i = 0; i < info1.length; i++) {
-            console.log(info1[i])
-            movies +=
-                `
-                <div class="div1">
-                    <h2 class="movietit">${info1[i].original_title}</h2>
-                </div>
-                <div class="div2">
-                    <img class="imgtit" src="${ "https://image.tmdb.org/t/p/original" + data.poster_path}" alt="">
-                </div>    
-                <ul>
-                    <li class="data" id="sinopsis">${info1[i].overview}</li>
-                    <li class="data" id="calificacion">${info1[i].vote_average}</li>
-                    <li class="data" id="duracion">${info1[i].runtime}</li>
-                    <li class="data" id="genero">${info1[i].genres}</li>
-                    <li class="data" id="estreno">${info1[i].release_date}</li>
-                </ul> 
-                <p>
-                    <a class="data" href="">Agregar a favoritos</a>
-                </p>      
-             `
+
+        console.log(infoGeneros);
+
+        for(let i = 0; i <infoGeneros.length; i++) {
+            arrayGeneros +=
+            <li>
+                <p><a href="detalle_genero_series.html?id=${infoGeneros[i].id}&title=${infoGeneros[i].name}">${infoGeneros[i].name}
+                </a></p>
+            </li>
         }
+        console.log(arrayGeneros);
+
+        genero.innerHTML = arrayGeneros;
     })
 
     .catch(function(error){

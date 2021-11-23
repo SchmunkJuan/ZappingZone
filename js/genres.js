@@ -13,7 +13,7 @@ fetch(`https://api.themoviedb.org/3/genre/movie/list?api_key=18244799e13812364e9
 			console.log(info[i]);
 			generos += `
         <li class="genero">
-            <a href="detalle_generos_pelis.html?id=${info[i].id}&genre_ids=${info[i].name}&tipo=pelis" > ${info[i].name} </a>
+            <a href="detalle_generos_pelis.html?id=${info[i].id}&genre_ids=${info[i].name}" > ${info[i].name} </a>
         </li>`
 		};
 
