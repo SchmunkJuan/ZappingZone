@@ -1,13 +1,12 @@
 console.log(favoritosPeliculas);
 console.log(favoritosSerie)
-//Recupero storage
+
 let favoritosPelisStorage = localStorage.getItem("favoritosPeliculas");
 let favoritosSerieStorage = localStorage.getItem("favoritosSerie");
-//y transformar de json en array
+
 let favoritosPeliculas = JSON.parse(favoritosPelisStorage);
 let favoritosSerie = JSON.parse(favoritosSerieStorage);
 
-//Capturar el contenedor de los elementos a mostar
 let section = document.querySelector('.lista');
 
 //Si el storage está vacío indicamos al usuario que no hay favoritos seleccionados.
@@ -19,7 +18,7 @@ if(favoritosPeliculas == null || favoritosPeliculas.length == 0) {
 } 
 
 function buscarYMostrarFavoritosPeliculas(id) {
-    let url =`https://api.themoviedb.org/3/movie/${id}?api_key=a070d8766877ff453cfcafc5a8c99cec`
+    let url =`https://api.themoviedb.org/3/movie/?api_key=a070d8766877ff453cfcafc5a8c99cec=${id}`
     
     fetch(url)
           .then(function (response) {
