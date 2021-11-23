@@ -19,7 +19,7 @@ fetch(url)
         title.innerHTML = genero
         
         let info = data.results
-        let detalle_generos = []
+        let detalle_generos = ""
         
         for (let i = 0; i < info.length; i++) {
 			console.log(info[i]);

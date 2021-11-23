@@ -4,7 +4,7 @@ let qsto = new URLSearchParams(qs); //Transformar la qs en un Objeto Literal
 let id = qsto.get('id'); //Obtener el dato de id del objeto literal
 
 //Armar un nuevo fetch
-let url = `https://api.themoviedb.org/3/tv/88?api_key=a070d8766877ff453cfcafc5a8c99cec${idSerie}`
+let url = `https://api.themoviedb.org/3/tv/${id}?api_key=a070d8766877ff453cfcafc5a8c99cec`
 
 fetch(url)
     .then(function(response){
@@ -13,38 +13,33 @@ fetch(url)
     .then(function(data){
         // console.log(data);
 
-       //Paso 1: capturar DOM.
-       let title = document.querySelector('h1');
-       let image = document.querySelector('img');
-       let calificacion = document.querySelector('.calificacionNumero');
-       let estreno = document.querySelector('.fechaNumero');
-       let sinopsis = document.querySelector('.sinopsisTexto');
-       let genero = document.querySelector('.generoTexto');
+        let movies = ""
+        let info1 = data.results
 
-       //Paso 2 y 3: actualizar datos y actualizar DOM;
-       title.innerText = data.name;
-       image.src=data.image;
+        document.querySelector('.seccionseries').innerHTML
 
-       calificacion.innerText = data.vote_average;    
-       estreno.innerText = data.first_air_date;
-       sinopsis.innerText = data.overview;
-
-        let infoGeneros = data.genres;
-        let arrayGeneros = "";
-
-
-        console.log(infoGeneros);
-
-        for(let i = 0; i <infoGeneros.length; i++) {
-            arrayGeneros +=
-            <li>
-                <p><a href="detalle_genero_series.html?id=${infoGeneros[i].id}&title=${infoDetalleS[i].name}">${infoDetalleS[i].name}"
-                </a></p>
-            </li>
+        for (let i = 0; i < info1.length; i++) {
+            console.log(info1[i])
+            movies +=
+                `
+                <div class="div1">
+                    <h2 class="movietit">${info1[i].original_title}</h2>
+                </div>
+                <div class="div2">
+                    <img class="imgtit" src="${ "https://image.tmdb.org/t/p/original" + data.poster_path}" alt="">
+                </div>    
+                <ul>
+                    <li class="data" id="sinopsis">${info1[i].overview}</li>
+                    <li class="data" id="calificacion">${info1[i].vote_average}</li>
+                    <li class="data" id="duracion">${info1[i].runtime}</li>
+                    <li class="data" id="genero">${info1[i].genres}</li>
+                    <li class="data" id="estreno">${info1[i].release_date}</li>
+                </ul> 
+                <p>
+                    <a class="data" href="">Agregar a favoritos</a>
+                </p>      
+             `
         }
-        console.log(arrayGeneros);
-
-        genero.innerHTML = arrayGeneros;
     })
 
     .catch(function(error){

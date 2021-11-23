@@ -15,7 +15,7 @@ fetch('https://api.themoviedb.org/3/movie/popular?api_key=18244799e13812364e948b
 			moviespop +=
 				`<li class="movies">
             <ul class="movie">
-                <a href="detalle_movie.html">
+                <a href="detalle_movie.html?id=${info[i].id}">
                     <img class="imgmovie" src="${ "https://image.tmdb.org/t/p/original" + data.results[i].poster_path}">
                         <li>${info[i].title}</li>
                 </a>
@@ -49,8 +49,8 @@ fetch('https://api.themoviedb.org/3/movie/top_rated?api_key=18244799e13812364e94
 			moviesval +=
 				`<li class="movies">
             <ul class="movie">
-                <a href="detalle_movie.html">
-                    <img class="imgmovie" src="${ "https://image.tmdb.org/t/p/original" + data.results[i].poster_path}">
+                <a href="detalle_movie.html?id=${info[i].id}">
+                    <img class="imgmovie" src="${ "https://image.tmdb.org/t/p/original" + info[i].poster_path}">
                         <li>${info[i].title}</li>
                 </a>
                         <li>${info[i].release_date}</li>
@@ -83,7 +83,7 @@ fetch('https://api.themoviedb.org/3/tv/popular?api_key=18244799e13812364e948bca9
 			seriespop +=
 				`<li class="movies">
         <ul class="movie">
-            <a href="detalle_series.html">
+            <a href="detalle_series.html?id=${info[i].id}">
                 <img class="imgmovie" src="${"https://image.tmdb.org/t/p/original" + data.results[i].poster_path}" alt="">
                 <li>${info[i].name}</li>
             </a>

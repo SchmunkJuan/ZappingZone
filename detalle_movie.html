@@ -1,4 +1,3 @@
-<!doctype html>
 <html>
 
 <head>
@@ -14,7 +13,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Fira+Sans:ital,wght@1,500&display=swap"
         rel="stylesheet">
-    <script src="./js/detalle_pelis.js"></script>
+        <script src="./js/detalle_pelis.js"></script>
 </head>
 
 <body>
@@ -28,22 +27,36 @@
             <a class="activo" href="favorite.html">Favoritos</a>
             <a class="activo" href="genres.html">Generos</a>
         </nav>
+       
     </header>
-
+    <script src="./js/search_results.js"></script>
     <main>
-        <h1></h1>
-        <img src="" alt="">
-        <p class="calificacion">Calificacion: </p>
-        <p class="estreno">Fecha de estreno: </p>
-        <p class="duracion">Duracion: </p>
-        <p class="sinopsis">Sinopsis: </p>
-        <p class="genero">Genero: </p>
-        <p>
-            <a class="fav" href="">Agregar a favoritos</a>
-        </p>
+        <div class="Banner">
+            <div class="contenedor">
+                <h3 class="title"></h3>
+                <p></p>
+            </div>
+        </div>
 
-        <script src="./js/detalle_pelis.js"></script>
-
+        <section class="seccionpelis">
+            <div class="div1">
+                <h2 class="movietit"></h2>
+                <p class="subt"></p>
+            </div>
+            <div class="div2">
+                <img class="imgtit" src="" alt="">
+            </div>    
+            <ul>
+                <li class="data" id="sinopsis"></li>
+                <li class="data" id="calificacion"></li>
+                <li class="data" id="duracion"></li>
+                <li class="data" id="genero"> </li>
+                <li class="data" id="estreno"></li>
+            </ul> 
+            <p>
+                <a class="fav" href="">Agregar a favoritos</a>
+            </p>      
+        </section>
     </main>
 
     <footer>
