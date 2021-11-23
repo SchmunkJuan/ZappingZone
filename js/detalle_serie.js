@@ -14,13 +14,13 @@ fetch(url)
         // console.log(data);
 
        //Paso 1: capturar DOM.
-       let title = document.querySelectorAll('h1')[1];
-           let image = document.querySelectorAll('img')[1];
-           let calificacion = document.querySelector('.calificacion');
-           let estreno = document.querySelector('.estreno');
-           let duracion = document.querySelector('.duracion')
-           let sinopsis = document.querySelector('.sinopsis');
-           let genero = document.querySelector('.genero');
+       let title = document.querySelectorAll('.movietit')[1];
+           let image = document.querySelectorAll('.imgtit')[1];
+           let calificacion = document.querySelector('#calificacion');
+           let estreno = document.querySelector('#estreno');
+           let duracion = document.querySelector('#duracion')
+           let sinopsis = document.querySelector('#sinopsis');
+           let genero = document.querySelector('#genero');
     
            //Paso 2 y 3: actualizar datos y actualizar DOM;
            title.innerText = data.title;
