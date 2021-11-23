@@ -4,7 +4,7 @@ console.log('favoritosSerie')
 let favoritosPelisStorage = localStorage.getItem("favoritosPeliculas");
 let favoritosSerieStorage = localStorage.getItem("favoritosSerie");
 //y transformar de json en array
-let favoritosPeliculas = JSON.parse(favoritosPeliculasStorage);
+let favoritosPeliculas = JSON.parse(favoritosPelisStorage);
 let favoritosSerie = JSON.parse(favoritosSerieStorage);
 
 console.log(favoritosPeliculas); 
@@ -15,7 +15,7 @@ let section = document.querySelector('.lista');
 
 //Si el storage está vacío indicamos al usuario que no hay favoritos seleccionados.
 if(favoritosPeliculas == null || !favoritosPeliculas || favoritosPeliculas.length) {
-    section.innerHTML='<p>No hay favoritos seleccionados</p>'
+    section.innerHTML +='h2';
 } else {
     if (favoritosPeliculas != null | favoritosPeliculas) {
         favoritosPeliculas.forEach((id) => {
@@ -48,7 +48,7 @@ if(favoritosPeliculas == null || !favoritosPeliculas || favoritosPeliculas.lengt
     
 }
 if(favoritosSerie == null || !favoritosSerie || favoritosSerie.length) {
-    section.innerHTML='<p>No hay favoritos seleccionados</p>'
+    section.innerHTML='h2'
 } else {
     if (favoritosSerie != null | favoritosSerie) {
         favoritosSerie.forEach((id) => {

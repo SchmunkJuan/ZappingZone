@@ -30,7 +30,7 @@ let nombreObject = new URLSearchParams(qs)
 let nombre = nombreObject.get("busqueda")
 
 let mainTitle = document.querySelector('.searchTitle');
-mainTitle = `Buscaste: ` + queryP
+mainTitle = `Resultados busqueda para: ${nombre}`
 let urlMovies = `https://api.themoviedb.org/3/search/multi?api_key=18244799e13812364e948bca9d25aff1&language=en-US&query=${queryP}`
 console.log(urlMovies);
 
@@ -45,7 +45,7 @@ fetch(urlMovies)
         
         let mainTitle = document.querySelector('h2');
         
-        mainTitle.innerHTML = nombreObject ;
+        mainTitle.innerHTML = nombre ;
         
         let stringVacioPeli = '';
         let info = data.results;
