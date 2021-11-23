@@ -14,14 +14,11 @@ console.log(favoritosSerie);
 let section = document.querySelector('.lista');
 
 //Si el storage está vacío indicamos al usuario que no hay favoritos seleccionados.
-if(favoritosPeliculas == null || !favoritosPeliculas || favoritosPeliculas.length) {
+if(favoritosPeliculas == null || favoritosPeliculas.length == 0) {
     section.innerHTML='<p>No hay favoritos seleccionados</p>'
 } else {
-    if (favoritosPeliculas != null | favoritosPeliculas) {
-        favoritosPeliculas.forEach((id) => {
-            console.log(id);
-            buscarYMostarFavoritosPeliculas(id)
-        });
+    for (let i=0; i<favoritosPeliculas.length; i++){
+        buscarYMostarFavoritos(favoritosPeliculas[i]);
     }
     
     function buscarYMostrarFavoritosPeliculas(id) {
@@ -57,7 +54,7 @@ if(favoritosSerie == null || !favoritosSerie || favoritosSerie.length) {
         });
     }
     function buscarYMostrarFavoritosSerie(id) {
-        fetch(`https://api.themoviedb.org/3/tv/${id}?api_key=7c98c63c7f5b48716db97eeade9c8a32&language=en-US`)
+        fetch(`https://api.themoviedb.org/3/tv/88?api_key=a070d8766877ff453cfcafc5a8c99cec${idSerie}`)
             .then(function (response) {
             return response.json();
             })
