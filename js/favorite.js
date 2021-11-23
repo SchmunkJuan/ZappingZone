@@ -44,14 +44,11 @@ if(favoritosPeliculas == null || favoritosPeliculas.length == 0) {
 
     
 }
-if(favoritosSerie == null || !favoritosSerie || favoritosSerie.length) {
+if(favoritosSerie == null || favoritosSerie.length == 0) {
     section.innerHTML='<p>No hay favoritos seleccionados</p>'
 } else {
-    if (favoritosSerie != null | favoritosSerie) {
-        favoritosSerie.forEach((id) => {
-            console.log(id);
-            buscarYMostarFavoritosSerie(id)
-        });
+    for (let i=0; i<favoritosSerie.length; i++){
+        buscarYMostarFavoritos(favoritosSerie[i]);
     }
     function buscarYMostrarFavoritosSerie(id) {
         fetch(`https://api.themoviedb.org/3/tv/88?api_key=a070d8766877ff453cfcafc5a8c99cec${idSerie}`)
