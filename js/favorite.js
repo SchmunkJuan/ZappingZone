@@ -1,14 +1,11 @@
-console.log('favoritosPeliculas');
-console.log('favoritosSerie')
+console.log(favoritosPeliculas);
+console.log(favoritosSerie)
 //Recupero storage
 let favoritosPelisStorage = localStorage.getItem("favoritosPeliculas");
 let favoritosSerieStorage = localStorage.getItem("favoritosSerie");
 //y transformar de json en array
 let favoritosPeliculas = JSON.parse(favoritosPelisStorage);
 let favoritosSerie = JSON.parse(favoritosSerieStorage);
-
-console.log(favoritosPeliculas); 
-console.log(favoritosSerie); 
 
 //Capturar el contenedor de los elementos a mostar
 let section = document.querySelector('.lista');
