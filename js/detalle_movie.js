@@ -2,16 +2,13 @@ let qs = location.search
 let qslo = new URLSearchParams(qs);
 let id = qslo.get ('id');
 
-let detalleMovie = qslo.get ('detailMovie_ids');
-
-let url = `https://api.themoviedb.org/3/movie?api_key=a070d8766877ff453cfcafc5a8c99cec=${id}`
+let url = `https://api.themoviedb.org/3/tv/%7Btv_id%7D?api_key=a070d8766877ff453cfcafc5a8c99cec${id}`
 
 fetch(url)
     .then(function(response){
         return response.json();
     })
     .then(function(data){
-        console.log(data);
 
         let title = document.querySelector('h1');
         let image = document.querySelector('img');
@@ -29,15 +26,14 @@ fetch(url)
         sinopsis.innerText +=data.overview;
         genero.innerText += data.genero;
     })
-    .catch(function(error){
-        console.log(error);
-    })
-    
+.catch(function(error){
+})
+ 
 let favoritos = [];
 
 let recuperoStorage = localStorage.getItem('favoritos');
 
-if(recuperoStorage != null){
+if(recuperoStorage != null || recuperoStorage == 0){
     favoritos = JSON.parse(recuperoStorage);
 }
 
@@ -47,8 +43,9 @@ if(favoritos.includes(id)){
     fav.innerText="Quitar de favoritos";
 }
 
-fav.addEventListener('click', function(evento){
-    evento.preventDefault();
+fav.addEventListener('click', function(movie){
+    movie.preventDefault()
+    alert('Agregar a favoritos')
 
     if(favoritos.includes(id)){
         let indice = favoritos.indexOf(id);
