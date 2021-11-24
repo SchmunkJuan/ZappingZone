@@ -16,27 +16,41 @@
     
 </head>
 <body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ZappingZone | Favoritos</title>
+    <link rel="shortcut icon" href="./img/ZappingZone6.png">
+    <link rel="stylesheet" type="text/css" href="./css/styles_favorite.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Fira+Sans:ital,wght@1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+</head>
+<body>
     <header>
         <div class="contenedor headerContainer">
             <img src="./img/ZappingZone6.png" class="logo">
-            <h1 class="titulo">ZappingZone</h2>
+            <h1 class="titulo">ZappingZone</h1>
         </div>
         <nav class="menu headerContainer">
             <a class="activo" href="index.html">Home</a>
             <a class="activo" href="favorite.html">Favoritos</a>
             <a class="activo" href="genres.html">Generos</a>
         </nav>
-        <form class="form" action="resultado-busqueda.html" method="GET">
+        <form action="resultado-busqueda.html" method="GET">
             <div class="buscador headerContainer">
                 <button type="submit">&#128270;</button>
-                <input type="text" class="Busqueda" placeholder="Busqueda" name="busqueda" value="" />
-                <p class="mensaje"></p>
+                <input type="text" class="Busqueda" placeholder="Busqueda" name="Busqueda" value="" />
             </div>
+            <p class="mensaje"></p>
         </form>
     </header>
-        <script src="./js/search_results.js"></script>
-
-    <script src="./js/favorite.js"></script>
+   
+    <script src="./js/search_results.js"></script>
+    <script src="js/favorite.js"></script>
 
     <main>
         <section>
@@ -48,6 +62,10 @@
                 <ol class="popmovie" >
                 </ol>
             </div>
+        </section>
+
+        <section class="lista">
+            
         </section>
     </main>
     
