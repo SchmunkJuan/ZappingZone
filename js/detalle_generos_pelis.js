@@ -5,7 +5,7 @@ let id = qslo.get ('id');
 
 let genero = qslo.get ('genre_ids');
 
-let url = (`https://api.themoviedb.org/3/discover/movie?api_key=18244799e13812364e948bca9d25aff1&with_genres=${id}`)
+let url = `https://api.themoviedb.org/3/discover/movie?api_key=18244799e13812364e948bca9d25aff1&with_genres=${id}`
 
 fetch(url)
     .then(function(response){
