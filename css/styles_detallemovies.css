@@ -132,7 +132,14 @@ footer p{
     background-color: rgb(39, 39, 39);
     padding: 20px 0px;
 }
-
+.tmdb {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    margin-left: 35%;
+}
 @media (min-width:768px) {
     
 }
@@ -207,5 +214,13 @@ footer p{
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
+    }
+    .tmdb {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 3%;
+        margin-left: 49%;
     }
 }

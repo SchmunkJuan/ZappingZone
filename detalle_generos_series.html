@@ -28,15 +28,15 @@
             <a class="activo" href="favorite.html">Favoritos</a>
             <a class="activo" href="genres.html">Generos</a>
         </nav>
-        <form action="resultado-busqueda.html" method="GET">
+        <form class="form" action="resultado-busqueda.html" method="GET">
             <div class="buscador headerContainer">
                 <button type="submit">&#128270;</button>
-                <input type="text" class="Busqueda" placeholder="Busqueda" name="Busqueda" value="" />
+                <input type="text" class="Busqueda" placeholder="Busqueda" name="busqueda" value="" />
+                <p class="mensaje"></p>
             </div>
-            <p class="mensaje"></p>
         </form>
     </header>
-    <script src="./js/search_results.js"></script>
+        <script src="./js/search_results.js"></script>
     <main>
         <section>
             <h2 class="title"></h2>
@@ -54,6 +54,7 @@
 
     <footer>
         <p>Juan Ignacio Schmunk | Malena Krompolcas | Martina Coletto</p>
+        <img class="tmdb" src="./img/movie_logo.png">
     </footer>
 </body>
 

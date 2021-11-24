@@ -127,7 +127,14 @@ footer p{
     background-color: rgb(39, 39, 39);
     padding: 20px 0px;
 }
-
+.tmdb {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    margin-left: 35%;
+}
 @media (min-width:768px) {
     
 }
@@ -227,5 +234,12 @@ footer p{
     header nav a.activo {
         color: #fff;
     }
-
+    .tmdb {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 3%;
+        margin-left: 49%;
+    }
 }
