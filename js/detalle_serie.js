@@ -13,7 +13,7 @@ fetch(url)
         let title = document.querySelector('h1');
         let image = document.querySelector('img');
         let calificacion = document.querySelector('#calificacion');
-        let estreno = document.querySelector('.estreno');
+        let estreno = document.querySelector('#estreno');
         let sinopsis = document.querySelector('.sinopsis');
         let genero = document.querySelector('.genero');
 
