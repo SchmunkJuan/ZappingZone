@@ -76,3 +76,57 @@ function buscarYMostrarFavoritos(id){
             console.log(error);
         })
 }
+//Boton de Favoritos
+//Creo array a rellenar de peliculas favoritas
+let peliculasFav = []
+//Recupero el storage
+let recuperoStorage = localStorage.getItem("favoritosPeliculas");
+let recuperoStorage = localStorage.getItem("favoritosSerie");
+//Reviso si el id ya esta en favoritos
+if(recuperoStorage != null){
+    favoritosPeliculas = JSON.parse(recuperoStorage);
+    favoritosSerie = JSON.parse(recuperoStorage);
+}
+//Capturo el elemento DOM
+let fav = document.querySelector('.fav');
+let botonFav = document.querySelector('.botonFav');
+
+if(favoritosPeliculas.includes(id)){
+    botonFav.innerText = 'Quitar de favoritos'
+}
+
+if(favoritosSerie.includes(id)){
+    botonFav.innerText = 'Quitar de favoritos'
+}
+
+fav.addEventListener('click', function(evento){
+    evento.preventDefault();
+    
+    if(favoritosPeliculas.includes(id)){
+        let indice = favoritosPeliculas.indexOf(id);
+        favoritosPeliculas.splice(indice, 1);
+        botonFav.innerText = 'Agregar a favoritos'
+    } else {
+        favoritosPeliculas.push(id);
+        botonFav.innerHTML = 'Quitar de favoritos'
+    }
+    console.log(favoritosPeliculas);
+    let favsToString =JSON.stringify(favoritosPeliculas);
+    localStorage.setItem('favoritosPeliculas', favsToString)
+})
+
+fav.addEventListener('click', function(evento){
+    evento.preventDefault();
+    
+    if(favoritosSerie.includes(id)){
+        let indice = favoritosSerie.indexOf(id);
+        favoritosSerie.splice(indice, 1);
+        botonFav.innerText = 'Agregar a favoritos'
+    } else {
+        favoritosSerie.push(id);
+        botonFav.innerHTML = 'Quitar de favoritos'
+    }
+    console.log(favoritosSerie);
+    let favsToString =JSON.stringify(favoritosSerie);
+    localStorage.setItem('favoritosSerie', favsToString)
+})
