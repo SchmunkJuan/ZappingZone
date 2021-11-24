@@ -1,4 +1,4 @@
-console.log('favoritos');
+console.log('favorito');
 
 let recuperoStorage = localStorage.getItem('favorito');
 let favorito = JSON.parse(recuperoStorage);
